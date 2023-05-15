@@ -10,6 +10,12 @@ public class POO_L1_P9_MetodosParametrosArgumentos {
         
         op1.sumar(n1, n2);
         op1.resultadoSum();
+        op1.restar(n1, n2);
+        op1.resultadoRes();
+        op1.multiplicar(n1, n2);
+        op1.resultadoMul();
+        op1.dividir(n1, n2);
+        op1.resultadoDiv();
     }
     
 }
