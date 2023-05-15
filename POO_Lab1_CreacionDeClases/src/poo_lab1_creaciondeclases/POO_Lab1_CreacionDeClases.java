@@ -3,7 +3,7 @@ package poo_lab1_creaciondeclases;
 
 public class POO_Lab1_CreacionDeClases {
     public static void main(String[] args) {
-        Laptop carro1 = new Laptop();
+        Carro carro1 = new Carro();
         carro1.marca = "BMW";
         carro1.color = "Blanco";
         carro1.modelo = "M8 Coupe";
@@ -18,7 +18,6 @@ public class POO_Lab1_CreacionDeClases {
         System.out.print("Potencia: " + carro1.potencia + "hp\n\n");
         
         carro1.prender();
-        
         carro1.acelerar();
         carro1.acelerar();
         carro1.acelerar();
