@@ -1,20 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package poo_l1_p9_metodosparametrosargumentos;
-
-/**
- *
- * @author ESPE
- */
+import javax.swing.JOptionPane;
 public class POO_L1_P9_MetodosParametrosArgumentos {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int n1, n2;
+        n1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero: "));
+        n2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero: "));
+    
+        Operators op1 = new Operators();
+        
+        op1.sumar(n1, n2);
+        op1.resultadoSum();
     }
     
 }
