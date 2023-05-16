@@ -17,5 +17,4 @@ public class POO_L1_P9_MetodosParametrosArgumentos {
         op1.dividir(n1, n2);
         op1.resultadoDiv();
     }
-    
 }

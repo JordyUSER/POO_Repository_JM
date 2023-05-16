@@ -7,7 +7,12 @@ public class POO_L1_P7_Metodos {
         
         operacion1.CaptuarNums();
         operacion1.Suma();
-        operacion1.Resultado();
+        operacion1.ResultadoSum();
+        operacion1.Resta();
+        operacion1.ResultadoRes();
+        operacion1.Division();
+        operacion1.ResultadoDiv();
+        operacion1.Multiplicacion();
+        operacion1.ResultadoMul();
     }
-    
 }
