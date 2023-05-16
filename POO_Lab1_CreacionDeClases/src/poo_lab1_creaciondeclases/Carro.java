@@ -1,6 +1,5 @@
 //clase Carro
 package poo_lab1_creaciondeclases;
-
 public class Carro{
     public String marca = "";
     public String modelo = "";
@@ -30,5 +29,4 @@ public class Carro{
     public static void tocarClaxon(){
         System.out.println("El carro suena el claxon");
     }
-
 }
