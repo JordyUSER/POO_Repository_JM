@@ -10,8 +10,7 @@ public class POO6_Condicionales {
         } else if((hora > 18) && (hora <= 24)){
             System.out.println("Buenas Noches / Good Evening");
         } else {
-            System.out.println("Tienes una hora incorrecta...");
+            System.out.println("Hora incorrecta!");
         }
-    }
-    
+    }   
 }

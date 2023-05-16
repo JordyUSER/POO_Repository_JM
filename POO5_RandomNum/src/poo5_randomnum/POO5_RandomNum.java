@@ -4,7 +4,7 @@ public class POO5_RandomNum {
     public static void main(String[] args) {
         double number;
         
-        number = (Math.random() * 50)+10;
+        number = (int)(Math.random() * 10)+1;
         System.out.println(number);
         
         if(number >= 10 && number <=60){
@@ -13,5 +13,4 @@ public class POO5_RandomNum {
             System.out.println(false);
         }
     }
-    
 }
