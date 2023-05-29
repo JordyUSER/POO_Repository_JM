@@ -40,4 +40,17 @@ public class Ordenamientos{
             }
         }
     }
+
+    public void OrdInsercion(){
+        for(int i=0;i<this.nNumeros;i++){
+            int pos = i;
+            int aux1 = arr[i];
+            while ((pos>0) && (arr[pos-1]>aux1)) {
+                arr[pos] = arr[pos-1];
+                pos--;
+            }
+            arr[pos] = aux1;
+        }
+    }
+
 }

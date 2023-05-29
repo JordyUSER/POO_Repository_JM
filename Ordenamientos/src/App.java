@@ -6,12 +6,21 @@ public class App {
         a = Integer.parseInt(JOptionPane.showInputDialog("Especifique la cantidad de numeros que va a ingresar: "));
 
         obj1.setnNumeros(a);
+        System.out.print("Arreglo 1.\n");
         obj1.establecerArr();
         obj1.mostrarArrC();
         obj1.OrdBurbuja();
-        System.out.println("\n");
+        System.out.print("\n");
         obj1.mostrarArrC();
-        System.out.println("\n");
+        System.out.print("\n");
+        obj1.mostrarArrD();
+        System.out.print("\nArreglo 2.\n");
+        obj1.establecerArr();
+        obj1.mostrarArrC();
+        obj1.OrdInsercion();
+        System.out.print("\n");
+        obj1.mostrarArrC();
+        System.out.print("\n");
         obj1.mostrarArrD();
     }
 }
