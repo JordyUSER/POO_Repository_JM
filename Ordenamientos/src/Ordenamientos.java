@@ -1,7 +1,9 @@
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 public class Ordenamientos{
     int nNumeros = 0, arr[], aux;
+    ArrayList<Carros> cars = new ArrayList<Carros>(); //Declaración de un array con ArrayList
     public int getnNumeros() {
         return nNumeros;
     }
