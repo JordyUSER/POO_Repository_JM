@@ -34,7 +34,7 @@ public class Triangulo extends Figura{
     	this.altura_h = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la altura h: "));
     }
     
-    public void area(double longitud_a, double longitud_b, double longitud_c, double altura_h) {
+    public void area(double longitud_b, double altura_h) {
     	double area;
     	area = (longitud_b*altura_h);
     	System.out.println("El area del triangulo es: " + area);
