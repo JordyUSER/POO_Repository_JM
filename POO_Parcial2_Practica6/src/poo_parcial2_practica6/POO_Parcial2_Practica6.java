@@ -1,6 +1,7 @@
 package poo_parcial2_practica6;
 import java.io.*;
 import java.util.*;
+import com.csvreader.*;
 /**
  *
  * @author Jordy
