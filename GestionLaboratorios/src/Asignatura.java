@@ -1,19 +1,56 @@
 
 public class Asignatura {
-	private String nombre;
+	public String nombre;
 	private String horariosLabEx[][] = new String[5][5];
 	private String horariosLabCo[][] = new String[5][5];
-	
+	LaboratorioComputacional labCom1;
+	LaboratorioExactas labEx1;
 	public Asignatura(String nombre) {
 		this.nombre = nombre;
 	}
 	
 	public void setLabCo(String nombre, int capacidad, int nComps) {
-		LaboratorioComputacional labCom1 = new LaboratorioComputacional(nombre, capacidad, nComps);
+		labCom1 = new LaboratorioComputacional(nombre, capacidad, nComps);
 	}
 	
 	public void setLabEx(String Nombre, int capac, String ayudanteLab) {
-		LaboratorioExactas labEx1 = new LaboratorioExactas(Nombre, capac, ayudanteLab);
+		 labEx1 = new LaboratorioExactas(Nombre, capac, ayudanteLab);
+	}
+	
+	public void setEquipos(int lab, String equipos) {
+		switch(lab) {
+		case 1:
+			labEx1.setEquipos(equipos);	
+			break;
+		case 2:
+			labCom1.setEquipos(equipos);
+			break;
+		default:
+			System.out.println("Ingrese un laboratorio existente...");
+			break;
+		}
+	}
+	
+	public void getEquipos(int lab) {
+		switch(lab) {
+		case 1:
+			labEx1.mostrarEquipos();	
+			break;
+		case 2:
+			labCom1.mostrarEquipos();
+			break;
+		default:
+			System.out.println("Ingrese un laboratorio existente...");
+			break;
+		}
+	}
+	
+	public void getAyudante() {
+		labEx1.mostrarAyudanteLab();
+	}
+	
+	public void getNComps() {
+		labCom1.getNumComps();
 	}
 	
 	public void vaciarHorariosEx() {
@@ -33,19 +70,19 @@ public class Asignatura {
 	}
 	
 	public void asignarHorarioLabEx(String materia, int hora, int dia) {
-            if(horariosLabEx[dia][hora]!="Vacio"){
+            if(horariosLabEx[dia-1][hora-1]!="Vacio"){
                 System.out.println("El horario seleccionado no esta disponoble.");
             } else {
-                this.horariosLabEx[dia][hora] = materia;
+                this.horariosLabEx[dia-1][hora-1] = materia;
                 System.out.println("Horario asignado...");
             }
 	}
 	
 	public void asignarHorarioLabCo(String materia, int hora, int dia) {
-            if(horariosLabEx[dia][hora]!="Vacio"){
+            if(horariosLabEx[dia-1][hora-1]!="Vacio"){
                 System.out.println("El horario seleccionado no esta disponoble.");
             } else {
-                this.horariosLabEx[dia][hora] = materia;
+                this.horariosLabEx[dia-1][hora-1] = materia;
                 System.out.println("Horario asignado...");
             }
 	}
@@ -53,7 +90,9 @@ public class Asignatura {
 	public void mostrarHorariosLabEx() {
 		System.out.println(
 				"========================================\n" +
-				"Horario de los laboratorios de Exactas\n" +
+				"Horario del laboratorio \n" + labEx1.nombre + "\n" +
+				"Ayudante: " + labEx1.getHelper() + "\n" +
+				"Capacidad: " + labEx1.capacidad + "\n" +
 				"========================================\n" +
 				"\nLunes" +
 				"\n07:00 - 09:00: " + horariosLabEx[0][0] +
@@ -90,7 +129,9 @@ public class Asignatura {
 	public void mostrarHorariosLabCo() {
 		System.out.println(
 				"========================================\n" +
-				"Horario de los laboratorios de Computacion\n" +
+				"Horario del laboratorio \n" + labCom1.nombre + "\n" +
+				"Numero de computadores: " + labCom1.getNumComps() + "\n" +
+				"Capacidad: " + labCom1.capacidad + "\n" +
 				"========================================\n" +
 				"\nLunes" +
 				"\n07:00 - 09:00: " + horariosLabCo[0][0] +

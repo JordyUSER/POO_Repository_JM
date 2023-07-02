@@ -1,7 +1,7 @@
 
 public class Laboratorio {
-	private String nombre;
-	private int capacidad;
+	public String nombre;
+	public int capacidad;
 	public String equipos;
 	
 	public String getEquipos() {

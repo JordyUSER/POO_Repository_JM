@@ -12,6 +12,10 @@ public class LaboratorioComputacional extends Laboratorio{
 		System.out.println("El numero de computadoras disponibles es: " + this.numComputadoras);
 	}
 	
+	public int getNumComps() {
+		return numComputadoras;
+	}
+	
 	@Override
 	public void mostrarEquipos() {
 		System.out.println("El laboratorio de computacion cuenta con los equipos: " + equipos);
