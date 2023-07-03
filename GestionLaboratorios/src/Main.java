@@ -18,7 +18,7 @@ public class Main {
 					"\n		Menu " + a1.nombre + " \n" +
 					"1. Establecer un laboratorio.\n" +
 					"2. Asignar horarios.\n" +
-					"3. Vacial horarios.\n" +
+					"3. Vaciar horarios.\n" +
 					"4. Gestionar Laboratorios.\n" +
 					"5. Salir\n");
 			
@@ -196,7 +196,7 @@ public class Main {
 									"1. Mostrar horarios\n" +
 									"2. Ingresar Equipos de Laboratorio\n" +
 									"3. Mostrar Equipos de Laboratorio\n" +
-									"4. Mostrar Ayudante de Laboratorio\n" +
+									"4. Mostrar numero de Computadoras del Laboratorio\n" +
 									"5. Salir\n");
 							opcion2 = Integer.parseInt(JOptionPane.showInputDialog("Escoja la opcion de gestion: "));
 							switch(opcion2) {
@@ -214,7 +214,7 @@ public class Main {
 								flag3 = false;
 								break;
 							case 4:
-								a1.getNComps();;
+								a1.getNComps();
 								flag3 = false;
 								break;
 							case 5:

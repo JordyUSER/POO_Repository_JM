@@ -50,7 +50,7 @@ public class Asignatura {
 	}
 	
 	public void getNComps() {
-		labCom1.getNumComps();
+		labCom1.mostrarNumComps();
 	}
 	
 	public void vaciarHorariosEx() {
@@ -70,21 +70,21 @@ public class Asignatura {
 	}
 	
 	public void asignarHorarioLabEx(String materia, int hora, int dia) {
-            if(horariosLabEx[dia-1][hora-1]!="Vacio"){
-                System.out.println("El horario seleccionado no esta disponoble.");
-            } else {
-                this.horariosLabEx[dia-1][hora-1] = materia;
-                System.out.println("Horario asignado...");
-            }
+		if(horariosLabEx[dia-1][hora-1]!="Vacio"){
+			System.out.println("El horario seleccionado no esta disponible.");
+		} else {
+			this.horariosLabEx[dia-1][hora-1] = materia;
+			System.out.println("Horario asignado...");
+		}
 	}
 	
 	public void asignarHorarioLabCo(String materia, int hora, int dia) {
-            if(horariosLabEx[dia-1][hora-1]!="Vacio"){
-                System.out.println("El horario seleccionado no esta disponoble.");
-            } else {
-                this.horariosLabEx[dia-1][hora-1] = materia;
-                System.out.println("Horario asignado...");
-            }
+		if(horariosLabCo[dia-1][hora-1]!="Vacio"){
+			System.out.println("El horario seleccionado no esta disponible.");
+		} else {
+			this.horariosLabCo[dia-1][hora-1] = materia;
+			System.out.println("Horario asignado...");
+		}
 	}
 	
 	public void mostrarHorariosLabEx() {
