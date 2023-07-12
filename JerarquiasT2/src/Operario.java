@@ -1,0 +1,60 @@
+
+public class Operario extends Empleado{
+	private int nivel = 1;
+	
+	public Operario(String nombre, String fechaIngreso, int mesesTrabajados, int edad, double salarioAnual) {
+		super(nombre, fechaIngreso, mesesTrabajados, edad, salarioAnual);
+	}
+	
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+
+	public void actualizarNivel(int mesesTrabajados) {
+		if (getMesesTrabajados() >= 24 && getMesesTrabajados() < 48) {
+			setNivel(2);
+			System.out.println("Su nivel cambia a 2");
+		} else if (getMesesTrabajados() >= 48 && getMesesTrabajados() < 72) {
+			setNivel(3);
+			System.out.println("Su nivel cambia a 3");
+		} else if (getMesesTrabajados() >= 72 && getMesesTrabajados() < 96) {
+			setNivel(4);
+			System.out.println("Su nivel cambia a 4");
+		} else if (getMesesTrabajados() >= 96) {
+			setNivel(5);
+			System.out.println("Su nivel cambia a 5");
+		} else {
+			System.out.println("Su nivel se mantiene...");
+		}
+	}
+	
+	@Override
+	public void incentivar() {
+		if(getMesesTrabajados()>30 && getNivel()>2) {
+			setSalarioAnual((2*BONO)+getSalarioAnual());
+			System.out.println("\nCumple con los 2 requisitos, a su salario se le suma " + (BONO * 2) +"$.");
+		} else if (getMesesTrabajados()>30 || getNivel()>2){
+			setSalarioAnual(BONO+getSalarioAnual());
+			System.out.println("\nCumple con 1 requisito, a su salario se le suma " + (BONO) +"$.");
+		} else {
+			System.out.println("\nNo cumple con los requisitos para ser incentivado...");
+		}		
+	}
+
+	@Override
+	public void mostrarDatos() {
+		System.out.println(
+				"\nDatos de Operario" + 
+				"\nNombre:           " + getNombre() +
+				"\nEdad:             " + getEdad() +
+				"\nFecha de ingreso: " + getFechaIngreso() +
+				"\nMeses trabajados: " + getMesesTrabajados() +
+				"\nSalario anual:    " + getSalarioAnual() + "$" +
+				"\nNivel:            " + getNivel());
+	}
+
+}

@@ -5,7 +5,7 @@ import java.io.*;
  * @author Jordy
  */
 public class Archivo {
-    public static void crearArchivo(String nombreArchivo){            
+    public static void crearArchivo(String nombreArchivo) {            
         File archivo = new File(nombreArchivo);
         try{
             PrintWriter salida = new PrintWriter(archivo);

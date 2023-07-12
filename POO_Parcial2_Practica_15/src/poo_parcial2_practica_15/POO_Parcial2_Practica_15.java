@@ -7,7 +7,8 @@ import javax.swing.JOptionPane;
  */
 public class POO_Parcial2_Practica_15 {
     public static void main(String[] args) {
-        boolean flag = true;
+    	
+    	boolean flag = true;
         Archivo a1 = new Archivo();
         do{
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(
@@ -17,15 +18,13 @@ public class POO_Parcial2_Practica_15 {
                     "3. Leer Archivo\n"));
             switch(opcion){
                 case 1:
-                    a1.crearArchivo("C:\\Users\\ESPE.DESKTOP-MTB7TFC\\Documents\\Jordy_POO\\miArchivo");
+                	
+                    a1.crearArchivo("miArchivo.txt");
                     break;
                 case 2:
                     
             }    
         }while(flag!=false);
-        
-        
-        
         
     }
 }
