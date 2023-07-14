@@ -1,0 +1,47 @@
+import javax.swing.JOptionPane;
+public class Main {
+
+	public static void main(String[] args) throws Exception{
+		Director d1;
+		Operario o1;
+		int opcion;
+		int mesesWorked, edad, personal;
+		double salarioAnual;
+		boolean flag, flag2;
+		String nombre, fechaIng, dep;
+		
+		do {
+			flag = true;
+			opcion = Integer.parseInt(JOptionPane.showInputDialog(
+					"\n\tMenú de Gestion" +
+					"\n1. Director." +
+					"\n2. Operario." +
+					"\n3. Salir." +
+					"\n\nIngrese una opcion: "));
+			switch(opcion) {
+			case 1:
+				nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+				edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+				fechaIng = JOptionPane.showInputDialog("Fecha de ingreso\nFormato DD/MM/AAAA\n\nIngrese su fecha de ingreso: ");
+				mesesWorked = Integer.parseInt(JOptionPane.showInputDialog("Ingrese sus meses trabajados: "));
+				salarioAnual = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su salario anual: "));
+				dep = JOptionPane.showInputDialog("Ingrese su departamento: ");
+				personal = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de personal que tiene a cargo: "));
+				d1 = new Director(nombre, fechaIng, mesesWorked, edad, salarioAnual, dep, personal);
+				do {
+					flag2 = true;
+				} while(flag2 != false);
+				break;
+				
+			case 3:
+				System.out.println("\nGracias por usar el programa :D.");
+				flag = false;
+			default:
+				System.out.println("\nIngrese una opcion valida >:v.");
+				break;
+			}
+		} while(flag != false);
+
+	}
+
+}

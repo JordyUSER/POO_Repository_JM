@@ -1,0 +1,7 @@
+import java.util.Scanner;
+
+public interface GestorMethods {
+	public boolean Login(Scanner sc);
+	public boolean Register(Scanner sc);
+	public void showPatrimonio();
+}

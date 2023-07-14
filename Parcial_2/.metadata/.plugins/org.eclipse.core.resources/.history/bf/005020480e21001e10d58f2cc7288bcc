@@ -1,0 +1,8 @@
+import java.io.File;
+
+public interface BaseMethods {
+	public boolean createFile(File fileData);
+	public boolean checkFiles();
+	public boolean checkFiles(User user);
+	
+}

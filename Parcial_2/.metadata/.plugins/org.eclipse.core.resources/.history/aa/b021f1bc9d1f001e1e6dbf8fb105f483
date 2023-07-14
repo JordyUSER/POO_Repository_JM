@@ -1,0 +1,15 @@
+
+public class Operario extends Empleado{
+	private int nivel;
+	public Operario(String nombre, String fechaIngreso, int edad, double salarioAnual, int nivel) {
+		super(nombre, fechaIngreso, edad, salarioAnual);
+		this.nivel = nivel;
+	}
+
+	@Override
+	public void incentivar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class ManageMoney {
+	private String name;
+    private long CI;
+    private int role;
+    //private String user;
+    private String pass;
+    
+    public String descripcion;
+    public int tipo = 0;
+    public String date;
+    public float value;
+    
+    protected File userFile = new File("src\\Data\\"+"users.txt");
+    protected File transactionFile = new File("src\\Data\\"+"history.txt");
+    
+    protected Base root = new Base(); //Acceso a archivos
+    protected User user = new User(); //Usuario Actual
+}

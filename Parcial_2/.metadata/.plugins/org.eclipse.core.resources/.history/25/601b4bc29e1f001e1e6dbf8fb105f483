@@ -1,0 +1,35 @@
+
+public class Director extends Empleado{
+	private String departamento, personal;
+	
+	public Director(String nombre, String fechaIngreso, int mesesTrabajados, int edad, double salarioAnual, String departamento, String personal) {
+		super(nombre, fechaIngreso, mesesTrabajados, edad, salarioAnual);
+		this.departamento = departamento;
+		this.personal = personal;
+	}
+	
+	public String getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+
+	public String getPersonal() {
+		return personal;
+	}
+
+	public void setPersonal(String personal) {
+		this.personal = personal;
+	}
+
+	@Override
+	public void incentivar() {
+		if(getMesesTrabajados()>30) {
+			
+		}
+		
+	}
+
+}

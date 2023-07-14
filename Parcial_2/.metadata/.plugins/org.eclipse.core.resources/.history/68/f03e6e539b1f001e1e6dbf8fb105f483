@@ -1,0 +1,15 @@
+
+public class Operario extends Empleado{
+
+	public Operario(String nombre, String fechaIngreso, int edad, double salarioAnual) {
+		super(nombre, fechaIngreso, edad, salarioAnual);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void inventivar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

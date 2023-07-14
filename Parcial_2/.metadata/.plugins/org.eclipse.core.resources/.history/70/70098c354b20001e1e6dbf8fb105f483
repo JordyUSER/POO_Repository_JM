@@ -1,0 +1,36 @@
+
+public class Operario extends Empleado{
+	private int nivel;
+	
+	public Operario(String nombre, String fechaIngreso, int mesesTrabajados, int edad, double salarioAnual, int nivel) {
+		super(nombre, fechaIngreso, mesesTrabajados, edad, salarioAnual);
+		this.nivel = nivel;
+	}
+	
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+
+	@Override
+	public void incentivar() {
+		if(getMesesTrabajados()>30 && getNivel()>2) {
+			setSalarioAnual((2*BONO)+getSalarioAnual());
+		} else if (getMesesTrabajados()>30 || getNivel()>2){
+			setSalarioAnual(BONO+getSalarioAnual());
+		} else {
+			System.out.println("\nNo cumple con los requisitos para ser incentivado...");
+		}		
+	}
+
+	@Override
+	public void mostrarDatos() {
+		System.out.println(
+				"\nDatos de " + );
+		
+	}
+
+}

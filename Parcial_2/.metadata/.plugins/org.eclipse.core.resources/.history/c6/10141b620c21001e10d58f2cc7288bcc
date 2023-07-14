@@ -1,0 +1,5 @@
+import java.util.Scanner;
+
+public interface GestorMethods {
+	public boolean Login(Scanner sc);
+}

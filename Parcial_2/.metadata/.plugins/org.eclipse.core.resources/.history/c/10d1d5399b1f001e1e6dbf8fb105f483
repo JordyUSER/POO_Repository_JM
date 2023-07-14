@@ -1,0 +1,15 @@
+
+public class Director extends Empleado{
+	private String departamento, personal;
+	public Director(String nombre, String fechaIngreso, int edad, double salarioAnual) {
+		super(nombre, fechaIngreso, edad, salarioAnual);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void inventivar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

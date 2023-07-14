@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+public class Main {
+
+	public static void main(String[] args) throws Exception{
+		Director d1;
+		Operario o1;
+		int opcion;
+		int mesesWorked, edad, personal;
+		double salarioAnual;
+		boolean flag;
+		String nombre, fechaIng, dep;
+		
+		do {
+			flag = true;
+			opcion = Integer.parseInt(JOptionPane.showInputDialog(
+					"\n\tMenú de Gestion" +
+					"\n1. Director." +
+					"\n2. Operario." +
+					"\n3. Salir." +
+					"\n\nIngrese una opcion: "));
+			switch(opcion) {
+			case 1:
+				nombre = JOptionPane.showInputDialog("Ingrese su nombre: ");
+				edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad: "));
+				fechaIng = JOptionPane.showInputDialog("Fecha de ingreso\nFormato DD/MM/AAAA\n\nIngrese su fecha de ingreso: ");
+				break;
+			default:
+				System.out.println("\nIngrese una opcion valida >:v.");
+				break;
+			}
+		} while(flag != false);
+
+	}
+
+}

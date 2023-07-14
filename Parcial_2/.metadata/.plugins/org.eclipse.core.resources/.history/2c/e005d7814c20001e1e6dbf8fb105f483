@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+public class Main {
+
+	public static void main(String[] args) throws Exception{
+		Director d1;
+		Operario o1;
+		int opcion;
+		boolean flag;
+		
+		do {
+			flag = true;
+			opcion = Integer.parseInt(JOptionPane.showInputDialog(
+					"\n\tMenú de Gestion" +
+					"\n1. Director." +
+					"\n2. Operario." +
+					"\n\nIngrese una opcion: "));
+		} while(flag != false);
+
+	}
+
+}
